@@ -14,6 +14,8 @@ $( document ).ready(function() {
   
 	  $("button").click(function(){
 	    var message=$("input").val();
+	    var words=message.split(" ")
+	     console.log(words)
 	    var piglatin = ay(message);
 	    $("#message").text(piglatin);
 	});
