@@ -5,6 +5,10 @@
 // CREATE THE FUNCTIONS BELOW
 
 // Document Ready Function. All of your jQuery should go in here. 
+for(var count=0;count<3;count=count+1){
+	console.log(count)
+}
+
 $( document ).ready(function() {
   
 	  function ay(word){
@@ -16,8 +20,18 @@ $( document ).ready(function() {
 	    var message=$("input").val();
 	    var words=message.split(" ")
 	     console.log(words)
-	    var piglatin = ay(message);
-	    $("#message").text(piglatin);
+	     
+        var piglatin=" ";
+		 for (var i = 0; i < words.length; i++) {
+		 	piglatin = piglatin+ ay(words[i])+" ";
+	  
+    	 $("#message").append(words[i] + "ay "); 
+		}  
+	  //  var piglatin = ay(message);
+	  //  $("#message").text(piglatin);
+	  
+	    console.log(piglatin)
+	     
 	});
 });
 
